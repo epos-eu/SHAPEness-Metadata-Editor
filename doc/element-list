@@ -1,0 +1,15 @@
+org.epos.metadata.editor
+org.epos.metadata.editor.dialog
+org.epos.metadata.editor.engine
+org.epos.metadata.editor.engine.checkers
+org.epos.metadata.editor.engine.converters
+org.epos.metadata.editor.engine.converters.beans
+org.epos.metadata.editor.engine.converters.methods
+org.epos.metadata.editor.engine.io
+org.epos.metadata.editor.engine.model
+org.epos.metadata.editor.engine.utils
+org.epos.metadata.editor.handler
+org.epos.metadata.editor.model
+org.epos.metadata.editor.views
+org.epos.metadata.editor.wizard
+org.epos.metadata.enums
