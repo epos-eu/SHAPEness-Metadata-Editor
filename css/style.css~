@@ -262,6 +262,7 @@ textarea {
 
 .ftco-animate {
   opacity: 0;
+  color: black;
   visibility: hidden; }
 
 .bg-primary {
