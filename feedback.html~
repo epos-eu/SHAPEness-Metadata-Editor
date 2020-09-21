@@ -7,11 +7,14 @@
     <meta name="description" content="DCAT Metadata Editor" />
     <meta name="keywords" content="" />
     <meta name="author" content="EPOS Workstation" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
+
     
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -199,7 +202,8 @@
             <div class="ftco-pricing">
               <h2>Standard</h2>
               <p class="ftco-price-per text-center"><sup>$</sup><strong>25</strong><span>/mo</span></p>
-              <ul class="list-unstyled mb-5">
+              <ul class="list-unstyled<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ mb-5">
                 <li>Far far away behind the word mountains</li>
                 <li>Even the all-powerful Pointing has no control</li>
                 <li>When she reached the first hills</li>
