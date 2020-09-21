@@ -459,7 +459,7 @@
                 <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Write your message"></textarea>
               </div>
               <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Send Message">
+                <input type="submit" class="btn btn-primary" value="Send feedback">
               </div>
             </form>
           </div>
