@@ -23,6 +23,36 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body data-spy="scroll" data-target="#ftco-navbar" data-offset="200">
+  
+   
+    <script>
+		$('#gitform').submit(function() {
+				alert("fieldsaddafda");
+				e.preventDefault();
+		
+				var request = require('request');
+
+				var bugReport = 
+				{
+  					"title": "Found a bug",
+  					"body": "I'm having a problem with this.",
+  					"labels": [
+    						"bug"
+  						]
+				}
+
+				request.post(
+				    'https://api.github.com/repos/epos-eu/DCAT-Metadata-Editor/issues',
+				    { json: bugReport },
+				    function (error, response, body) {
+				        if (!error && response.statusCode == 200) {
+				            console.log(body)
+				        }
+				    }
+				);
+				
+		});
+	</script>
     
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
@@ -430,23 +460,7 @@
       </div>
       
     </section>-->
-    
-    <script>
-		$('#gitform').submit(function() {
-		
-				var request = require('request');
-
-				var fields = $( ":input" ).serializeArray();
-				
-				console.log(fields);
-				
-				var feedbackReport = {
-					"title": fields['title']			
-				}				
-				
-    			return false;
-		});
-</script>
+   
     <section class="ftco-section bg-white ftco-slant ftco-slant-dark" id="section-contact">
       <div class="container">
         <div class="row">
@@ -459,7 +473,7 @@
               </div>
               <div class="form-group">
                 <label for="email" class="sr-only">Email</label>
-                <input type="text" class="form-control" id="email" placeholder="Enter your email" required>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
               </div>
               <div class="form-group">
                 <label for="message" class="sr-only">Title</label>
