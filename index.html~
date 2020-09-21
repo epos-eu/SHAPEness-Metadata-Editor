@@ -49,8 +49,8 @@
             <h2 class="h5 ftco-subheading mb-5 ftco-animate" style="color: black; font-size: 15px;">The DCAT Application profile for data portals in Europe (DCAT-AP) is a specification based on W3C Data Catalog Vocabulary (DCAT) for describing metadata of public sector datasets in Europe. In the framework of the European Plate Observing System (EPOS) - the ESFRI Landmark Research Infrastructure for solid-Earth sciences - we designed and developed an Application Profile that extends the DCAT. EPOS-DCAT Application Profile has been conceived to represent Core Concepts - such as Organization, Person, Facility, Equipment, WebService, Publication and Software - from several scientific communities participating in EPOS.
 <br>
 This Metadata Editor is a Java desktop application which allows users to create and update EPOS-DCAT-AP RDF/Turtle files validating them against SHACL constraint.</h2>    
-            <p><a href="#" target="_blank" class="btn btn-primary ftco-animate">Beta version available here</a></p>
-            <p><a href="/DCAT-Metadata-Editor/doc/" target="_blank" class="btn btn-primary ftco-animate">Documentation<img src="images/bg_1.jpg" alt="" /></a></p>
+            <p><a href="#" target="_blank" class="btn btn-primary ftco-animate">Beta version</a></p>
+            <!--<p><a href="/DCAT-Metadata-Editor/doc/" target="_blank" class="btn btn-primary ftco-animate">Documentation<img src="images/bg_1.jpg" alt="" /></a></p>-->
           </div>
         </div>
       </div>
