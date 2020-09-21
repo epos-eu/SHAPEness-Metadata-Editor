@@ -428,8 +428,16 @@
     </section>-->
     
     <script>
-		$('.my-form').on('submit', function () {
-    			alert('Form submitted!');
+		$('#gitform').on('submit', function () {
+		
+				var request = require('request');
+
+				var fields = $( ":input" ).serializeArray();
+				var feedbackReport = {
+					"title": fields['title']			
+				}				
+				
+    			alert('Form submitted!' + feedbackReport);
     			return false;
 		});
 </script>
@@ -438,7 +446,7 @@
         <div class="row">
 
           <div class="col-md pr-md-5 mb-5">
-            <form action="" method="post" id="gitform">
+            <form method="post" id="gitform">
               <div class="form-group">
                 <label for="name" class="sr-only">Name</label>
                 <input type="text" class="form-control" id="name" placeholder="Enter your name">
@@ -446,6 +454,10 @@
               <div class="form-group">
                 <label for="email" class="sr-only">Email</label>
                 <input type="text" class="form-control" id="email" placeholder="Enter your email">
+              </div>
+              <div class="form-group">
+                <label for="message" class="sr-only">Title</label>
+                <textarea name="title" id="title" cols="30" rows="1" class="form-control" placeholder="Write title"></textarea>
               </div>
               <div class="form-group">
                 <label for="message" class="sr-only">Message</label>
