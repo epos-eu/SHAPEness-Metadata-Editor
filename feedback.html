@@ -426,12 +426,19 @@
       </div>
       
     </section>-->
+    
+    <script>
+		$('#gitform').on('submit', function () {
+    			alert('Form submitted!');
+    			return false;
+		});
+</script>
     <section class="ftco-section bg-white ftco-slant ftco-slant-dark" id="section-contact">
       <div class="container">
         <div class="row">
 
           <div class="col-md pr-md-5 mb-5">
-            <form action="" method="post">
+            <form action="" method="post" id="gitform">
               <div class="form-group">
                 <label for="name" class="sr-only">Name</label>
                 <input type="text" class="form-control" id="name" placeholder="Enter your name">
