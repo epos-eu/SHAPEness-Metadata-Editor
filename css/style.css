@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5,
   z-index: 3; }
   @media screen and (max-width: 991px) {
     .ftco-navbar-light {
-      background: #000 !important;
+      background: #fff !important;
       top: 0;
       position: relative; } }
   .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5,
           display: none; } }
   .ftco-navbar-light .navbar-toggler {
     border: none;
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: rgba(0, 0, 0, 0.5) !important;
     cursor: pointer;
     padding-right: 0;
     text-transform: uppercase;
