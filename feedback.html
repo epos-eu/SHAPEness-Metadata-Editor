@@ -23,37 +23,6 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body data-spy="scroll" data-target="#ftco-navbar" data-offset="200">
-  
-   
-    <script>
-		$('#gitform').submit(function() {
-				alert("fieldsaddafda");
-				e.preventDefault();
-		
-				var request = require('request');
-
-				var bugReport = 
-				{
-  					"title": "Found a bug",
-  					"body": "I'm having a problem with this.",
-  					"labels": [
-    						"bug"
-  						]
-				}
-
-				request.post(
-				    'https://api.github.com/repos/epos-eu/DCAT-Metadata-Editor/issues',
-				    { json: bugReport },
-				    function (error, response, body) {
-				        if (!error && response.statusCode == 200) {
-				            console.log(body)
-				        }
-				    }
-				);
-				
-		});
-	</script>
-    
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
         <a class="navbar-brand" href="https://www.epos-ip.org/epos-eric" style="color: black;">
@@ -66,7 +35,7 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active"><a href="index.html" class="nav-link"style="color: black;">Home</a></li>
             <li class="nav-item"><a href="documentation.html" class="nav-link"style="color: black;">Documentation</a></li>
-            <li class="nav-item"><a href="feedback.html" class="nav-link"style="color: black;">Feedback</a></li>
+            <li class="nav-item"><a href="feedback.html" class="nav-link"style="color: black;">Issues</a></li>
            <!-- <li class="nav-item"><a href="#section-features" class="nav-link">Features</a></li>-->
             <!--<li class="nav-item"><a href="/DCAT-Metadata-Editor/doc/" class="nav-link"style="color: black;">Documentation</a></li>-->
            <!-- <li class="nav-item"><a href="#section-about" class="nav-link">About</a></li>
@@ -156,19 +125,54 @@
       </div>
     </section>-->
     <!-- END section -->
-<!--
+
     <section class="ftco-section ftco-slant" id="section-services">
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center ftco-animate">
-            <h2 class="text-uppercase ftco-uppercase">Services</h2>
+            <h2 class="text-uppercase ftco-uppercase">ISSUES</h2>
+            <br>
+            <br>
+            <p><a href="https://github.com/epos-eu/DCAT-Metadata-Editor/issues/new" target="_blank" style="background-color: black; color: white;" class="btn btn-primary ftco-animate">Open GitHub issue</a></p>
+            <p><a href="https://epos-ci.brgm.fr/epos-public/issuetracker/-/issues/new?issue%5Bassignee_id%5D=&issue%5Bmilestone_id%5D=&labels[]=Metadata%20Editor" target="_blank"  style="background-color: orangered; color: black;" class="btn btn-primary ftco-animate">Open GitLab issue</a></p>
+            <br>
+            <br>
+            <br>
+            <!--<p class="lead">To open a new issue:<br></p>-->
             <div class="row justify-content-center mb-5">
-              <div class="col-md-7">
-                <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              </div>
+              <div id="traker" class="col-md-7">
+                <script>
+                  var urlToGetAllOpenBugsGitHub = "https://api.github.com/repos/epos-eu/DCAT-Metadata-Editor/issues?state=open";
+       
+                 $(document).ready(function () {
+                     $.getJSON(urlToGetAllOpenBugsGitHub, function (allIssues) {
+                         $("#traker").append("<p class=\"lead\">Found " + allIssues.length + " issues on GitHub</p></br>");
+                         $.each(allIssues, function (i, issue) {
+                             $("#traker")
+                                 .append("<b>" + issue.number + " - " + issue.title + "</b></br>")
+                                 .append("created at: " + issue.created_at + "</br>")
+                                 .append(issue.body + "</br></br></br>");
+                         });
+                     });
+                 });
+                 var urlToGetAllOpenBugsGitLab = "https://epos-ci.brgm.fr/api/v4/projects/85/issues?state=opened&labels[]=Metadata%20Editor";
+       
+                $(document).ready(function () {
+                    $.getJSON(urlToGetAllOpenBugsGitLab, function (allIssues) {
+                        $("#traker").append("<p class=\"lead\">Found " + allIssues.length + " issues on GitLab</p></br>");
+                        $.each(allIssues, function (i, issue) {
+                            $("#traker")
+                                .append("<b>" + issue.number + " - " + issue.title + "</b></br>")
+                                .append("created at: " + issue.created_at + "</br>")
+                                .append(issue.body + "</br></br></br>");
+                        });
+                    });
+                });
+                  </script>
+                </div>
             </div>
           </div>
-        </div>-->
+        </div>
         <!-- END row -->
     <!--    <div class="row">
           <div class="col-lg-4 mb-5 ftco-animate">
@@ -461,7 +465,7 @@
       
     </section>-->
    
-    <section class="ftco-section bg-white ftco-slant ftco-slant-dark" id="section-contact">
+   <!-- <section class="ftco-section bg-white ftco-slant ftco-slant-dark" id="section-contact">
       <div class="container">
         <div class="row">
 
@@ -487,12 +491,12 @@
                 <input type="submit" class="btn btn-primary" value="Send feedback">
               </div>
             </form>
-          </div>
-          <!--<div class="col-md" id="map">
           </div>-->
+          <!--<div class="col-md" id="map">
+          </div>
         </div>
       </div>
-    </section>
+    </section>-->
     <!--<footer class="ftco-footer ftco-bg-dark">
       <div class="container">
         <div class="row mb-5">
