@@ -1,4 +1,3 @@
 # SHAPEness Metadata Editor
 
-[![DOI](https://zenodo.org/badge/296619995.svg)](https://zenodo.org/badge/latestdoi/296619995)
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5702869.svg)](https://doi.org/10.5281/zenodo.5702869)
