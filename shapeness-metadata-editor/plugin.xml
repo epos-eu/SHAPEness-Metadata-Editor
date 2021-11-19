@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+    <one line to give the program's name and a brief idea of what it does.>
+        
+   
+        This program is free software: you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation, either version 3 of the License, or
+        (at your option) any later version.
+   
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU General Public License for more details.
+   
+        You should have received a copy of the GNU General Public License
+        along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ -->
+
+<plugin>
+   
+   <extension
+         id="EPOSid"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            icon="icons/test.ico"
+            thread="main"
+            visible="true">
+         <run
+               class="org.epos.metadata.editor.ui.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.epos.metadata.editor.EPOSid"
+            name="SHAPEness">
+         <property
+               name="appName"
+               value="SHAPEness">
+         </property>
+         <property name="cssTheme" value="org.eclipse.e4.ui.css.theme.e4_default"/>
+         <property
+               name="windowImages"
+               value="icons/mde-16.png,icons/mde-32.png,icons/mde-48.png,icons/mde-128.png,icons/mde-256.png">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="F9F9FF">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="7,560,445,20">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="5,580,920,20">
+         </property>
+         <property
+               name="aboutText"
+               value="SHAPEness Metadata Editor&#x0A;&#x0A;Version: 2020 - 11&#x0A;&#x0A;Copyright © 2019 EPOS. All rights reserved. &#x0A;&#x0A;This product is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; version 2.1 of the License.&#x0A;It is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  &#x0A;See the GNU General Public License for more details.">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/mde-128.png">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+         
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="org.epos.metadata.editor.ui.PerspectiveFactory"
+            id="org.epos.metadata.editor.perspectiveEPOS"
+            name="EPOS">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            class="org.epos.metadata.editor.ui.views.ViewGraph"
+            icon="icons/graph.png"
+            id="org.epos.metadata.editor.viewGraph"
+            name="Graph"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="false"
+            class="org.eclipse.ui.internal.ViewIntroAdapterPart"
+            icon="icons/welcome.png"
+            id="org.epos.metadata.editor.introview"
+            name="Wecome"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="true"
+            class="org.epos.metadata.editor.ui.views.ViewForm"
+            icon="icons/table.gif"
+            id="org.epos.metadata.editor.viewForm"
+            name="FormToolkit"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="false"
+            class="org.epos.metadata.editor.ui.views.ViewOutline"
+            icon="icons/outline_co.png"
+            id="org.epos.metadata.editor.viewOutline"
+            name="Outline"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="false"
+            class="org.epos.metadata.editor.ui.views.ViewGraphPalette"
+            icon="platform:/plugin/org.eclipse.gef/icons/palette_view.gif"
+            id="org.epos.metadata.editor.viewPalette"
+            name="Palette"
+            restorable="true">
+      </view>      
+      
+      
+      
+   </extension>
+  
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.RemoveNodeAction"
+            id="org.epos.metadata.editor.removeNode"
+            name="RemoveNode">
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.RemoveConnectionAction"
+            id="org.epos.metadata.editor.removeConnection"
+            name="RemoveConnection">
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.RemoveAllNodesAction"
+            id="org.epos.metadata.editor.removeAllNodes"
+            name="Remove all nodes">
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.RenameIDNodeAction"
+            id="org.epos.metadata.editor.renameIDnode"
+            name="Rename Node ID">
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.InfoVocabularyTerm"
+            id="org.epos.metadata.editor.infoVocabularyTerm"
+            name="infoTerm">
+         <commandParameter
+               id="org.epos.metadata.editor.commandParameterTerm"
+               name="infoTerm"
+               optional="false">
+         </commandParameter>
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.CreateNewProject"
+            id="org.epos.metadata.editor.newProject"
+            name="New Project">
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.ExportTurtleHandler"
+            id="org.epos.metadata.editor.exportTurtle"
+            name="Export RDF/Turtle file">
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.ShowTurtleFileHandler"
+            id="org.epos.metadata.editor.showTurtle"
+            name="Preview RDF/Turtle file">
+            <state
+             	class="org.eclipse.ui.handlers.RegistryToggleState:false"
+             	id="org.eclipse.ui.commands.toggleState">
+       		</state>
+      
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.ProperiesNodeAction"
+            id="org.epos.metadata.editor.propertiesNode"
+            name="Node Properties">
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.RemoveAction"
+            id="org.epos.metadata.editor.remove"
+            name="Remove Node or Connection">
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.ChangeLayoutHandler"
+            id="org.epos.metadata.editor.commandChangeLayout"
+            name="Change Graph Layout">
+         <commandParameter
+               id="org.epos.metadata.editor.commandParameterLayout"
+               name="layout"
+               optional="false">
+         </commandParameter>
+         
+         <commandParameter
+	         id="org.eclipse.ui.commands.radioStateParameter"
+	         name="State"
+	         optional="false">
+   		</commandParameter>
+	   <state
+	         class="org.eclipse.ui.handlers.RadioState:Spring"
+	         id="org.eclipse.ui.commands.radioState">
+	   </state>
+         
+         
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.ColorPreferencesHandler"
+            id="org.epos.metadata.editor.commandChangeNodeColor"
+            name="Change Color">
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.DuplicateNodeAction"
+            id="org.epos.metadata.editor.duplicateNode"
+            name="Duplicate Node">
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.OpenExistingProject"
+            id="org.epos.metadata.editor.openProject"
+            name="Open existing project">
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.ShowShaclFileHandler"
+            id="org.epos.metadata.editor.showShaclFile"
+            name="Preview Shacl File ">
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.RemoveExistingProject"
+            id="org.epos.metadata.editor.removeProject"
+            name="Remove Project">
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.ShowWelcomeView"
+            id="org.epos.metadata.editor.showWelcome"
+            name="Wecome">
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.GitHandler"
+            id="org.epos.metadata.editor.gitpush"
+            name="Push RDF/Turtle file to Git repository">
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.ExportGraphAsImageHandler"
+            id="org.epos.metadata.editor.saveGraphImage"
+            name="Save Graph as Image">
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.ImportMetadataFromDOIHandler"
+            id="org.epos.metadata.editor.importFromDOI"
+            name="Import Metadata from Datacite">
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.AddNodeHandler"
+            id="org.epos.metadata.editor.addNodes"
+            name="Add new nodes">
+      </command>
+      <command
+            defaultHandler="org.epos.metadata.editor.ui.handlers.ImportMetadataFromOGCWMSHandler"
+            id="org.epos.metadata.editor.importFromOGCWMS"
+            name="Import Metadata from OGC WMS">
+      </command>
+     
+   </extension>
+   
+  
+   
+   
+   
+   <extension
+     point="org.eclipse.ui.menus">
+     
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               label="Project">
+            <command
+                  commandId="org.epos.metadata.editor.newProject"
+                  icon="icons/new_wiz.png"
+                  label="New Project"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.epos.metadata.editor.openProject"
+                  icon="platform:/plugin/org.eclipse.jdt.ui/icons/full/etool16/opentype.png"
+                  label="Open Existing Project"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.epos.metadata.editor.removeProject"
+                  icon="platform:/plugin/org.eclipse.ui.views.log/icons/eview16/error_log.gif"
+                  label="Remove Project"
+                  style="push">
+            </command>
+         </menu>
+         <menu
+               label="File">
+            
+            <command
+                  commandId="org.epos.metadata.editor.showTurtle"
+                  icon="icons/code.png"
+                  label="Preview RDF/Turtle file"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.epos.metadata.editor.showShaclFile"
+                  icon="platform:/plugin/org.eclipse.ui/icons/full/obj16/file_obj.png"
+                  label="Preview Shacl file"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.epos.metadata.editor.exportTurtle"
+                  icon="icons/export_wiz.png"
+                  label="Export RDF/Turtle file"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.epos.metadata.editor.gitpush"
+                  icon="icons/push.png"
+                  label="Push RDF/Turtle file to Git repository"
+                  style="push">
+            </command>
+            
+         </menu>
+        
+         <menu
+               label="Graph">
+            <menu
+                  label="Layout">
+               <command
+                     commandId="org.epos.metadata.editor.commandChangeLayout"
+                     label="Spring Layout"
+                     style="radio">
+                  <parameter
+                        name="org.epos.metadata.editor.commandParameterLayout"
+                        value="Spring Layout">
+                  </parameter>
+                  <parameter
+                        name="org.eclipse.ui.commands.radioStateParameter"
+                        value="Spring">
+                  </parameter>
+               </command>
+               <command
+                     commandId="org.epos.metadata.editor.commandChangeLayout"
+                     label="Tree Layout"
+                     style="radio">
+                  <parameter
+                        name="org.epos.metadata.editor.commandParameterLayout"
+                        value="Tree Layout">
+                  </parameter>
+                  <parameter
+                        name="org.eclipse.ui.commands.radioStateParameter"
+                        value="Tree">
+                  </parameter>
+               </command>
+               <command
+                     commandId="org.epos.metadata.editor.commandChangeLayout"
+                     label="Grid Layout"
+                     style="radio">
+                  <parameter
+                        name="org.epos.metadata.editor.commandParameterLayout"
+                        value="Grid Layout">
+                  </parameter>
+                  <parameter
+                        name="org.eclipse.ui.commands.radioStateParameter"
+                        value="Grid">
+                  </parameter>
+               </command>
+               <command
+                     commandId="org.epos.metadata.editor.commandChangeLayout"
+                     label="Horizontal Tree Layout"
+                     style="radio">
+                  <parameter
+                        name="org.epos.metadata.editor.commandParameterLayout"
+                        value="Horizontal Tree Layout">
+                  </parameter>
+                  <parameter
+                        name="org.eclipse.ui.commands.radioStateParameter"
+                        value="Horizontal">
+                  </parameter>
+               </command>
+               <command
+                     commandId="org.epos.metadata.editor.commandChangeLayout"
+                     label="Radial Layout"
+                     style="radio">
+                  <parameter
+                        name="org.epos.metadata.editor.commandParameterLayout"
+                        value="Radial Layout">
+                  </parameter>
+                  <parameter
+                        name="org.eclipse.ui.commands.radioStateParameter"
+                        value="Radial">
+                  </parameter>
+               </command>
+            </menu>
+            <command
+                  commandId="org.epos.metadata.editor.importFromDOI"
+                  icon="icons/importDOI.gif"
+                  label="Import Metadata from Datacite"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.epos.metadata.editor.importFromOGCWMS"
+                  icon="icons/import_ogc.png"
+                  label="Import Metadata from OGC"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.epos.metadata.editor.saveGraphImage"
+                  icon="icons/save_graph_img.png"
+                  label="Save Graph as Image"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.epos.metadata.editor.removeAllNodes"
+                  icon="icons/enabled/removeall.png"
+                  label="Remove all nodes"
+                  style="push">
+            </command>
+         </menu>
+         <menu
+               label="Node">
+            <command
+                  commandId="org.epos.metadata.editor.addNodes"
+                  icon="icons/enabled/plus.gif"
+                  label="Add"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.epos.metadata.editor.propertiesNode"
+                  icon="icons/table.gif"
+                  label="Properties"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.epos.metadata.editor.commandChangeNodeColor"
+                  icon="icons/palette.png"
+                  label="Change Colors"
+                  style="push"
+                  tooltip="Change Nodes Color">
+            </command>
+            <command
+                  commandId="org.epos.metadata.editor.renameIDnode"
+                  icon="icons/enabled/renameNode.gif"
+                  label="Rename ID"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.epos.metadata.editor.removeNode"
+                  icon="icons/remove.png"
+                  label="Remove"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.epos.metadata.editor.duplicateNode"
+                  icon="icons/duplicate.png"
+                  label="Duplicate"
+                  style="push">
+            </command>
+         </menu>
+         <menu
+               label="Help">
+            <command
+                  commandId="org.epos.metadata.editor.showWelcome"
+                  icon="icons/welcome.png"
+                  label="Welcome"
+                  style="push">
+            </command>
+         </menu>
+         
+      </menuContribution>
+     
+      
+      
+  <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <toolbar
+               id="org.epos.metadata.editor.toolbar.newProject">
+            <command
+                  commandId="org.epos.metadata.editor.newProject"
+                  icon="platform:/plugin/org.eclipse.ui/icons/full/etool16/new_wiz.png"
+                  label="New Project"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.epos.metadata.editor.openProject"
+                  icon="platform:/plugin/org.eclipse.jdt.ui/icons/full/etool16/opentype.png"
+                  label="Open Existing Project"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.epos.metadata.editor.exportTurtle"
+                  icon="platform:/plugin/org.eclipse.ui/icons/full/etool16/export_wiz.png"
+                  label="Export RDF/Turtle file"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.epos.metadata.editor.gitpush"
+                  icon="icons/push.png"
+                  label="Push RDF/Turtle file to Git repository"
+                  style="push">
+            </command>
+         </toolbar>
+      </menuContribution>
+      
+      
+      
+      <menuContribution locationURI="toolbar:org.epos.metadata.editor.viewGraph">
+         <command
+               commandId="org.epos.metadata.editor.commandChangeLayout"
+               icon="icons/graph_layout.gif"
+               label="Change Graph Layout"
+               style="pulldown">
+         </command>
+         <separator
+               name="org.epos.metadata.editor.separator1"
+               visible="true">
+         </separator>
+         <command
+               commandId="org.epos.metadata.editor.propertiesNode"
+               icon="icons/table.gif"
+               label="Properties"
+               style="push">
+         </command>
+         <command
+               commandId="org.epos.metadata.editor.importFromDOI"
+               icon="icons/importDOI.gif"
+               label="Import Metadata from Datacite"
+               style="push">
+         </command>
+         <command
+               commandId="org.epos.metadata.editor.importFromOGCWMS"
+               icon="icons/import_ogc.png"
+               label="Import Metadata from OGC WMS"
+               style="push">
+         </command>
+         <command
+               commandId="org.epos.metadata.editor.renameIDnode"
+               icon="icons/enabled/renameNode.gif"
+               label="Rename Node ID"
+               style="push">
+         </command>
+         <command
+               commandId="org.epos.metadata.editor.duplicateNode"
+               icon="icons/duplicate.png"
+               label="Duplicate Node"
+               style="push">
+         </command>
+         <command
+               commandId="org.epos.metadata.editor.saveGraphImage"
+               icon="icons/save_graph_img.png"
+               label="Save Graph as Image"
+               style="push">
+         </command>
+         <separator
+               name="org.epos.metadata.editor.separator2"
+               visible="true">
+         </separator>
+         <command
+               commandId="org.epos.metadata.editor.addNodes"
+               icon="icons/enabled/plus.gif"
+               label="Add new nodes"
+               style="push">
+         </command>    
+      	  
+        	<command
+               commandId="org.epos.metadata.editor.remove"
+               icon="icons/remove.png"
+               label="Remove Node or Connection"
+               style="push"/>
+         <command
+               commandId="org.epos.metadata.editor.removeAllNodes"
+               icon="icons/enabled/removeall.png"
+               label="Remove All Nodes"
+               style="push">
+         </command>
+        
+         <separator
+	         name="org.epos.metadata.editor.separator3"
+	         visible="true">
+   		 </separator>
+         <command
+               commandId="org.epos.metadata.editor.showTurtle"
+               icon="icons/code.png"
+               label="Preview RDF/Turtle file"
+               style="toggle">
+         </command>
+     </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.epos.metadata.editor.viewPalette">
+         <command
+               commandId="org.epos.metadata.editor.commandChangeNodeColor"
+               icon="icons/palette.png"
+               label="Change Colors"
+               style="push"
+               tooltip="Change Nodes Color">
+         </command>
+         <command
+               commandId="org.epos.metadata.editor.showShaclFile"
+               icon="platform:/plugin/org.eclipse.ui/icons/full/obj16/file_obj.png"
+               label="Preview Shacl file"
+               style="push">
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.epos.metadata.editor.commandChangeLayout">
+         <command
+               commandId="org.epos.metadata.editor.commandChangeLayout"
+               label="Spring Layout"
+               style="radio">
+            <parameter
+                  name="org.epos.metadata.editor.commandParameterLayout"
+                  value="Spring Layout">
+            </parameter>
+            <parameter
+               name="org.eclipse.ui.commands.radioStateParameter"
+               value="Spring">
+         	</parameter>
+         </command>
+         <command
+               commandId="org.epos.metadata.editor.commandChangeLayout"
+               label="Tree Layout"
+               style="radio">
+            <parameter
+                  name="org.epos.metadata.editor.commandParameterLayout"
+                  value="Tree Layout">
+            </parameter>
+            <parameter
+               name="org.eclipse.ui.commands.radioStateParameter"
+               value="Tree">
+         	</parameter>
+         </command>
+         <command
+               commandId="org.epos.metadata.editor.commandChangeLayout"
+               label="Grid Layout"
+               style="radio">
+            <parameter
+                  name="org.epos.metadata.editor.commandParameterLayout"
+                  value="Grid Layout">
+            </parameter>
+            <parameter
+               name="org.eclipse.ui.commands.radioStateParameter"
+               value="Grid">
+         	</parameter>
+         </command>
+         <command
+               commandId="org.epos.metadata.editor.commandChangeLayout"
+               label="Horizontal Tree Layout"
+               style="radio">
+            <parameter
+                  name="org.epos.metadata.editor.commandParameterLayout"
+                  value="Horizontal Tree Layout">
+            </parameter>
+            <parameter
+               name="org.eclipse.ui.commands.radioStateParameter"
+               value="Horizontal">
+         	</parameter>
+         </command>
+         <command
+               commandId="org.epos.metadata.editor.commandChangeLayout"
+               label="Radial Layout"
+               style="radio">
+            <parameter
+                  name="org.epos.metadata.editor.commandParameterLayout"
+                  value="Radial Layout">
+            </parameter>
+            <parameter
+               name="org.eclipse.ui.commands.radioStateParameter"
+               value="Radial">
+         	</parameter>
+         </command>
+      </menuContribution>
+       
+	</extension>
+   
+   
+   <extension
+         point="org.eclipse.ui.intro">
+      <intro
+            class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+            icon="icons/welcome.png"
+            id="org.epos.metadata.editor.intro">
+      </intro>
+      <introProductBinding
+            introId="org.epos.metadata.editor.intro"
+            productId="org.epos.metadata.editor.product">
+      </introProductBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.config">
+      <config
+            content="introContent.xml"
+            id="org.epos.metadata.editor.introConfigId"
+            introId="org.epos.metadata.editor.intro">
+         <presentation
+               home-page-id="root">
+            <implementation
+                  kind="html"
+                  os="win32,linux,macosx"
+                  style="content/shared.css">
+            </implementation>
+            <implementation
+                  kind="swt"/>
+         </presentation>
+      </config>
+   </extension>
+   
+   
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="help/graphContextDefinition.xml"
+            plugin="org.epos.metadata.editor">
+      </contexts>
+   </extension>
+  
+   
+   
+   <!--
+   <extension
+         point="org.eclipse.ui.themes">
+      <theme
+            id="org.epos.metadata.editor.custom.ui.theme"
+            name="EPOSTheme">
+         <colorOverride
+               id="org.eclipse.ui.workbench.ACTIVE_TAB_BG_END"
+               value="255,0,0">
+         </colorOverride>
+         <colorOverride
+               id="org.eclipse.ui.workbench.ACTIVE_TAB_BG_START"
+               value="0,255,0">
+         </colorOverride>
+         <fontOverride
+               id="org.eclipse.jface.dialogfont"
+               value="Lucida Sans-italic-12">
+         </fontOverride>
+      </theme>
+   </extension>
+   -->
+   
+   
+   
+</plugin>

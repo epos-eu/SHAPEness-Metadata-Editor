@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    <one line to give the program's name and a brief idea of what it does.>
+        
+   
+        This program is free software: you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation, either version 3 of the License, or
+        (at your option) any later version.
+   
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU General Public License for more details.
+   
+        You should have received a copy of the GNU General Public License
+        along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ -->
+
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
+  <identifier identifierType="DOI">10.6092/INGV.IT-AHEAD</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Albini, Paola</creatorName>
+      <givenName>Paola</givenName>
+      <familyName>Albini</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0003-4149-9760</nameIdentifier>
+      <affiliation affiliationIdentifier="https://ror.org/00qps9a02" affiliationIdentifierScheme="ROR">Istituto Nazionale di Geofisica e Vulcanologia (INGV)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Locati, Mario</creatorName>
+      <givenName>Mario</givenName>
+      <familyName>Locati</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0003-2185-3267</nameIdentifier>
+      <affiliation affiliationIdentifier="https://ror.org/00qps9a02" affiliationIdentifierScheme="ROR">Istituto Nazionale di Geofisica e Vulcanologia (INGV)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Rovida, Andrea</creatorName>
+      <givenName>Andrea</givenName>
+      <familyName>Rovida</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0001-6147-9981</nameIdentifier>
+      <affiliation affiliationIdentifier="https://ror.org/00qps9a02" affiliationIdentifierScheme="ROR">Istituto Nazionale di Geofisica e Vulcanologia (INGV)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Stucchi, Massimiliano</creatorName>
+      <givenName>Massimiliano</givenName>
+      <familyName>Stucchi</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0002-5870-1542</nameIdentifier>
+      <affiliation affiliationIdentifier="https://ror.org/02dq7z403" affiliationIdentifierScheme="ROR">Centro europeo di formazione e ricerca in ingegneria sismica (EUCENTRE)</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title xml:lang="en">European Archive of Historical EArthquake Data (AHEAD)</title>
+    <title titleType="AlternativeTitle">AHEAD</title>
+  </titles>
+  <publisher>Istituto Nazionale di Geofisica e Vulcanologia (INGV)</publisher>
+  <publicationYear>2013</publicationYear>
+  <resourceType resourceTypeGeneral="Collection">Historical earthquake data</resourceType>
+  <subjects>
+    <subject>macroseismic</subject>
+    <subject>intensity</subject>
+    <subject>historical earthquakes</subject>
+    <subject>historical seismology</subject>
+    <subject>Europe</subject>
+    <subject>Earth sciences and geology</subject>
+    <subject subjectScheme="UDC">550.3 Geophysics</subject>
+    <subject subjectScheme="LCC">QE - Geology</subject>
+    <subject subjectScheme="DDC">551 Geology, hydrology, meteorology</subject>
+  </subjects>
+  <contributors>
+    <contributor contributorType="ContactPerson">
+      <contributorName nameType="Personal">Locati, Mario</contributorName>
+      <givenName>Mario</givenName>
+      <familyName>Locati</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0003-2185-3267</nameIdentifier>
+    </contributor>
+    <contributor contributorType="ProjectMember">
+      <contributorName nameType="Personal">Musson, Roger M.W.</contributorName>
+      <givenName>Roger M.W.</givenName>
+      <familyName>Musson</familyName>
+      <nameIdentifier nameIdentifierScheme="ScopusID" schemeURI="">https://www.scopus.com/authid/detail.uri?authorId=7005455854</nameIdentifier>
+    </contributor>
+    <contributor contributorType="ProjectMember">
+      <contributorName nameType="Personal">Baumont, David</contributorName>
+      <givenName>David</givenName>
+      <familyName>Baumont</familyName>
+    </contributor>
+    <contributor contributorType="ProjectMember">
+      <contributorName nameType="Personal">Scotti, Oona</contributorName>
+      <givenName>Oona</givenName>
+      <familyName>Scotti</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0002-6640-9090</nameIdentifier>
+    </contributor>
+    <contributor contributorType="ProjectMember">
+      <contributorName nameType="Personal">Fäh, Donat</contributorName>
+      <givenName>Donat</givenName>
+      <familyName>Fäh</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0002-9195-4373</nameIdentifier>
+      <affiliation>Swiss Federal Institute of Technology (ETH)</affiliation>
+    </contributor>
+    <contributor contributorType="ProjectMember">
+      <contributorName nameType="Personal">Gisler, Monika</contributorName>
+      <givenName>Monika</givenName>
+      <familyName>Gisler</familyName>
+      <affiliation>Swiss Federal Institute of Technology (ETH)</affiliation>
+    </contributor>
+    <contributor contributorType="ProjectMember">
+      <contributorName nameType="Personal">Kästli, Philipp</contributorName>
+      <givenName>Philipp</givenName>
+      <familyName>Kästli</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0001-8667-8549</nameIdentifier>
+      <affiliation>Swiss Federal Institute of Technology (ETH)</affiliation>
+    </contributor>
+    <contributor contributorType="ProjectMember">
+      <contributorName nameType="Personal">Schwarz-Zanetti, Gabriela</contributorName>
+      <givenName>Gabriela</givenName>
+      <familyName>Schwarz-Zanetti</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0002-6952-5599</nameIdentifier>
+      <affiliation>Swiss Federal Institute of Technology (ETH)</affiliation>
+    </contributor>
+    <contributor contributorType="ProjectMember">
+      <contributorName nameType="Personal">Gómez Capera, Augusto Antonio</contributorName>
+      <givenName>Augusto Antonio</givenName>
+      <familyName>Gómez Capera</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0003-4076-3371</nameIdentifier>
+    </contributor>
+    <contributor contributorType="ProjectMember">
+      <contributorName nameType="Personal">Greci, Matilde</contributorName>
+      <givenName>Matilde</givenName>
+      <familyName>Greci</familyName>
+    </contributor>
+    <contributor contributorType="ProjectMember">
+      <contributorName nameType="Personal">Migliavacca, Paola</contributorName>
+      <givenName>Paola</givenName>
+      <familyName>Migliavacca</familyName>
+      <nameIdentifier nameIdentifierScheme="ScopusID" schemeURI="">https://www.scopus.com/authid/detail.uri?authorId=6505705816</nameIdentifier>
+    </contributor>
+    <contributor contributorType="ProjectMember">
+      <contributorName nameType="Personal">Mirto, Carmen</contributorName>
+      <givenName>Carmen</givenName>
+      <familyName>Mirto</familyName>
+      <affiliation>Consiglio Nazionale delle Ricerche (CNR)</affiliation>
+    </contributor>
+    <contributor contributorType="ProjectMember">
+      <contributorName nameType="Personal">Moroni, Andrea</contributorName>
+      <givenName>Andrea</givenName>
+      <familyName>Moroni</familyName>
+      <nameIdentifier nameIdentifierScheme="ScopusID" schemeURI="">https://www.scopus.com/authid/detail.uri?authorId=8961430900</nameIdentifier>
+    </contributor>
+    <contributor contributorType="ProjectMember">
+      <contributorName nameType="Personal">Viganò, Daniele</contributorName>
+      <givenName>Daniele</givenName>
+      <familyName>Viganò</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0003-2713-8387</nameIdentifier>
+      <affiliation>Global Earthquake Model (GEM)</affiliation>
+    </contributor>
+    <contributor contributorType="ProjectMember">
+      <contributorName nameType="Personal">Martínez Solares, José Manuel</contributorName>
+      <givenName>José Manuel</givenName>
+      <familyName>Martínez Solares</familyName>
+    </contributor>
+    <contributor contributorType="ProjectMember">
+      <contributorName nameType="Personal">Roca, Antoni</contributorName>
+      <givenName>Antoni</givenName>
+      <familyName>Roca</familyName>
+    </contributor>
+    <contributor contributorType="ProjectMember">
+      <contributorName nameType="Personal">Goula, Xavier</contributorName>
+      <givenName>Xavier</givenName>
+      <familyName>Goula</familyName>
+    </contributor>
+    <contributor contributorType="ProjectMember">
+      <contributorName nameType="Personal">Susagna, Teresa</contributorName>
+      <givenName>Teresa</givenName>
+      <familyName>Susagna</familyName>
+    </contributor>
+    <contributor contributorType="ProjectMember">
+      <contributorName nameType="Personal">Kouskouna, Vasiliki</contributorName>
+      <givenName>Vasiliki</givenName>
+      <familyName>Kouskouna</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0001-8671-7536</nameIdentifier>
+      <affiliation>National and Kapodistrian University of Athens (UOA)</affiliation>
+    </contributor>
+    <contributor contributorType="ProjectMember">
+      <contributorName nameType="Personal">Makropoulos, Konstantinos</contributorName>
+      <givenName>Konstantinos</givenName>
+      <familyName>Makropoulos</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0003-4656-1623</nameIdentifier>
+      <affiliation>National and Kapodistrian University of Athens (UOA)</affiliation>
+    </contributor>
+    <contributor contributorType="ProjectMember">
+      <contributorName nameType="Personal">Papaioannou, Christos A.</contributorName>
+      <givenName>Christos A.</givenName>
+      <familyName>Papaioannou</familyName>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Bernardini, Filippo</contributorName>
+      <givenName>Filippo</givenName>
+      <familyName>Bernardini</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0002-8486-4521</nameIdentifier>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Camassi, Romano</contributorName>
+      <givenName>Romano</givenName>
+      <familyName>Camassi</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0001-5957-2773</nameIdentifier>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Castelli, Viviana</contributorName>
+      <givenName>Viviana</givenName>
+      <familyName>Castelli</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0002-4949-3964</nameIdentifier>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Ercolani, Emanuela</contributorName>
+      <givenName>Emanuela</givenName>
+      <familyName>Ercolani</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0001-9716-6047</nameIdentifier>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Lambert, Jérôme</contributorName>
+      <givenName>Jérôme</givenName>
+      <familyName>Lambert</familyName>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Alexandre, Pierre</contributorName>
+      <givenName>Pierre</givenName>
+      <familyName>Alexandre</familyName>
+      <affiliation>Royal Observatory of Belgium (ROB)</affiliation>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Camelbeeck, Thierry</contributorName>
+      <givenName>Thierry</givenName>
+      <familyName>Camelbeeck</familyName>
+      <affiliation>Royal Observatory of Belgium (ROB)</affiliation>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Demircioglu, Mine Betül</contributorName>
+      <givenName>Mine Betül</givenName>
+      <familyName>Demircioglu</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0002-0029-5174</nameIdentifier>
+      <affiliation>Boğaziçi University (BOUN)</affiliation>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Sesetyan, Karin</contributorName>
+      <givenName>Karin</givenName>
+      <familyName>Sesetyan</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0001-5109-6477</nameIdentifier>
+      <affiliation>Boğaziçi University (BOUN)</affiliation>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Batlló, Josep</contributorName>
+      <givenName>Josep</givenName>
+      <familyName>Batlló</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0002-2493-3070</nameIdentifier>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Dost, Bernard</contributorName>
+      <givenName>Bernard</givenName>
+      <familyName>Dost</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0002-3839-7934</nameIdentifier>
+      <affiliation>Royal Netherlands Meteorological Institute (KNMI)</affiliation>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Tatevossian, Ruben</contributorName>
+      <givenName>Ruben</givenName>
+      <familyName>Tatevossian</familyName>
+      <affiliation>Russian Academy of Sciences (RAS)</affiliation>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Tatevossian, Tatiana N.</contributorName>
+      <givenName>Tatiana N.</givenName>
+      <familyName>Tatevossian</familyName>
+      <affiliation>Russian Academy of Sciences (RAS)</affiliation>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Hammerl, Christa</contributorName>
+      <givenName>Christa</givenName>
+      <familyName>Hammerl</familyName>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Lenhardt, Wolfgang</contributorName>
+      <givenName>Wolfgang</givenName>
+      <familyName>Lenhardt</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0001-9031-3753</nameIdentifier>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Cecić, Ina</contributorName>
+      <givenName>Ina</givenName>
+      <familyName>Cecić</familyName>
+      <affiliation>Slovenian Environment Agency (ARSO)</affiliation>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Živčić, Mladen</contributorName>
+      <givenName>Mladen</givenName>
+      <familyName>Živčić</familyName>
+      <affiliation>Slovenian Environment Agency (ARSO)</affiliation>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Radulian, Mircea</contributorName>
+      <givenName>Mircea</givenName>
+      <familyName>Radulian</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0003-3044-0114</nameIdentifier>
+      <affiliation>National Institute for Earth Physics (NIEP)</affiliation>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Glavcheva, Rumiana</contributorName>
+      <givenName>Rumiana</givenName>
+      <familyName>Glavcheva</familyName>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Carrilho, Fernando</contributorName>
+      <givenName>Fernando</givenName>
+      <familyName>Carrilho</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0003-3287-6800</nameIdentifier>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Alves, Paulo</contributorName>
+      <givenName>Paulo</givenName>
+      <familyName>Alves</familyName>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Fonseca, João Filipe de Barros Duarte</contributorName>
+      <givenName>João Filipe de Barros Duarte</givenName>
+      <familyName>Fonseca</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0003-0371-3682</nameIdentifier>
+      <affiliation>University of Lisbon (ULisboa)</affiliation>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Vilanova, Susana Pires</contributorName>
+      <givenName>Susana Pires</givenName>
+      <familyName>Vilanova</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0002-5366-552X</nameIdentifier>
+      <affiliation>University of Lisbon (ULisboa)</affiliation>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Bungum, Hilmar</contributorName>
+      <givenName>Hilmar</givenName>
+      <familyName>Bungum</familyName>
+      <affiliation>Norwegian Seismic Array (NORSAR)</affiliation>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Grünthal, Gottfried</contributorName>
+      <givenName>Gottfried</givenName>
+      <familyName>Grünthal</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0001-5992-8362</nameIdentifier>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Wahlström, Rutger</contributorName>
+      <givenName>Rutger</givenName>
+      <familyName>Wahlström</familyName>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Mäntyniemi, Päivi</contributorName>
+      <givenName>Päivi</givenName>
+      <familyName>Mäntyniemi</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0002-7617-8150</nameIdentifier>
+      <affiliation>University of Helsinki</affiliation>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Glavatovic, Branislav</contributorName>
+      <givenName>Branislav</givenName>
+      <familyName>Glavatovic</familyName>
+      <affiliation>Montenegro Seismological Observatory</affiliation>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Labak, Peter</contributorName>
+      <givenName>Peter</givenName>
+      <familyName>Labak</familyName>
+      <affiliation>Slovak Academy of Sciences (SAV)</affiliation>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Zsíros, Tibor</contributorName>
+      <givenName>Tibor</givenName>
+      <familyName>Zsíros</familyName>
+    </contributor>
+    <contributor contributorType="DataCollector">
+      <contributorName nameType="Personal">Herak, Marijan</contributorName>
+      <givenName>Marijan</givenName>
+      <familyName>Herak</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0001-8560-9912</nameIdentifier>
+      <affiliation>University of Zagreb</affiliation>
+    </contributor>
+    <contributor contributorType="RightsHolder">
+      <contributorName nameType="Organizational">Istituto Nazionale di Geofisica e Vulcanologia (INGV)</contributorName>
+      <nameIdentifier nameIdentifierScheme="ROR" schemeURI="">https://www.grid.ac/institutes/00qps9a02</nameIdentifier>
+    </contributor>
+  </contributors>
+  <dates>
+    <date dateType="Valid">1000-01-01/1899-12-31</date>
+    <date dateType="Created">2006-06-01/2012-12-01</date>
+    <date dateType="Issued">2013-01-24</date>
+  </dates>
+  <language>en</language>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsDocumentedBy" resourceTypeGeneral="Text">10.1785/0220130113</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsIdenticalTo" resourceTypeGeneral="Text">10.17616/r3804s</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Compiles" resourceTypeGeneral="Dataset">10.6092/ingv.it-share-sheec.1000-1899</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart" resourceTypeGeneral="Collection">10.13127/asmi</relatedIdentifier>
+  </relatedIdentifiers>
+  <sizes>
+    <size>About 250 data sources</size>
+    <size>About 5000 earthquakes</size>
+    <size>About 3800 set of macroseismic intensity data points</size>
+    <size>About 70000 macroseismic intensity data points</size>
+  </sizes>
+  <formats>
+    <format>text/html</format>
+    <format>application/vnd.google-earth.kml+xml</format>
+    <format>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</format>
+    <format>application/pdf</format>
+    <format>image/svg+xml</format>
+    <format>application/xml</format>
+    <format>application/xml</format>
+  </formats>
+  <version/>
+  <rightsList>
+    <rights>The data sources considered by AHEAD have their own copyright statement, when available. Users are requested to make reference to it. The inventory can be used for scientific purposes only, quoting the reference indicated above. Any commercial and profit use is explicitly forbidden. The inventory cannot be used, even partly, for serving as input in the compilation of other databases or catalogues without the permission of the AHEAD. It is forbidden to reproduce the AHEAD website, even partly, or to use it for establishing copies of the original website. Although the AHEAD WG makes every possible effort to supply the best available information, no warranty, expressed or implied, is provided as to the accuracy and reliability of the data supplied in the Archive. Users are cautioned to consider carefully the nature of the AHEAD content before using it for decisions that concern personal or public safety or in relation with business involving substantial financial or operational consequences. Conclusions drawn from this Archive, or actions undertaken on the basis of its contents, are the sole responsibility of the user. </rights>
+  </rightsList>
+  <descriptions>
+    <description xml:lang="en" descriptionType="Abstract">AHEAD, the European Archive of Historical Earthquake Data 1000-1899, is a distributed archive aiming at preserving, inventorying and making available, to investigators and other users, data sources on the earthquake history of Europe, such as papers, reports, Macroseismic Data Points (MDPs) in different scales (EMS-98, MSK, or MCS), and parametric catalogues.nThe AHEAD general repository rely on independent, regionally managed data archives. At present, eight regional, online macroseismic archives team up in AHEAD covering Italy, France, Switzerland, Spain, Catalunya, Belgium, and Greece. Data on areas not covered by a regionally managed archive is retrieved by checking out reliable and published scientific literature.nAHEAD inventory seismological data organized either in regional databases or in scientific papers, and does not archive historical sources (e.g. manuscripts, letters, dispatch) examined by the compilers of these studies. A great effort is being put in identifying and clearly marking fake earthquakes, events wrongly reported as earthquakes in catalogues. Fake earthquakes are due to a variety of reasons, for example can refer to a natural event such as landslides but interpreted as an earthquake, or generated by the misinterpretations of historical records, most commonly due to calendar problems or unclear historical reports not correctly interpreted by investigators that did not consider their historical context.nAHEAD can be queried by earthquake, to access the information related to each individual earthquake, or by data source, enabling access the earthquakes for which each seismological study provides information.nThe query by earthquake allow the user to visualise the full earthquake list or a portion of it, filtered by time-window, magnitude class or number of MDPs, or entering a custom geographical selection. Once selected, users access all archive data on the earthquakes, such as parameters (location and magnitude) from catalogues. The preferred European catalogue in AHEAD is SHEEC 1000-1899 (Stucchi et al., 2012). Macroseismic data from supporting seismological studies is also visible, and users may easily plot and compare the different interpretations available.nThe query by data source introduces the user to the list of archived seismological studies that contains data on the inventoried earthquakes. Each study can be clicked, giving access to the PDF of the original text when available or when the copyright allows for it, or a link to the publisher is provided when the PDF is not available. For each seismological study is also reported a list of considered earthquakes and a map showing their epicentres.nFollowing some pioneering attempts in the early 1990s, AHEAD was initiated and built up, for the European earthquakes between 1000 and 1899, in the frame of the EC Project NERIES, Network of Research Infrastructures for European Seismology (2006 and 2010). INGV Milan coordinated the NERIES Task NA4 called “Distributed Archive of Historical Earthquake Data”, and then continued the development during the EC Project SHARE, Seismic Hazard Harmonization in Europe (2009-2012), aimed at compiling an European earthquake catalogue called SHEEC using AHEAD data. SHEEC (1000-1899) was aimed at compiling earthquake location, moment magnitudes and related uncertainties using homogenous procedures for the entire continent. After the end of SHARE, AHEAD has been maintained and further implemented by INGV in the framework of the EC initiative EPOS, aimed at setting up the European Plate Observing System (2010-2012) a new ERIC, European Research Infrastructure Consortium.</description>
+  </descriptions>
+  <geoLocations>
+    <geoLocation>
+      <geoLocationPlace>Europe</geoLocationPlace>
+    </geoLocation>
+    <geoLocation>
+      <geoLocationPlace>Europe</geoLocationPlace>
+      <geoLocationBox>
+        <westBoundLongitude>-32</westBoundLongitude>
+        <eastBoundLongitude>45</eastBoundLongitude>
+        <southBoundLatitude>33</southBoundLatitude>
+        <northBoundLatitude>74</northBoundLatitude>
+      </geoLocationBox>
+    </geoLocation>
+  </geoLocations>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>European Commission (EC)</funderName>
+      <funderIdentifier funderIdentifierType="ROR">https://ror.org/00k4n6c32</funderIdentifier>
+      <awardNumber awardURI="https://cordis.europa.eu/project/rcn/79877/">26130</awardNumber>
+      <awardTitle>NERIES - Network of Research Infrastructures for European Seismology</awardTitle>
+    </fundingReference>
+    <fundingReference>
+      <funderName>Ministero dell'Istruzione, dell'Università e della Ricerca (MIUR)</funderName>
+      <funderIdentifier funderIdentifierType="ROR">https://ror.org/0166hxq48</funderIdentifier>
+      <awardTitle>EPOS MIUR</awardTitle>
+    </fundingReference>
+    <fundingReference>
+      <funderName>European Commission (EC)</funderName>
+      <funderIdentifier funderIdentifierType="ROR">https://ror.org/00k4n6c32</funderIdentifier>
+      <awardNumber awardURI="https://cordis.europa.eu/project/rcn/198338/">676564</awardNumber>
+      <awardTitle>EPOS IP - European Plate Observing System</awardTitle>
+    </fundingReference>
+    <fundingReference>
+      <funderName>European Commission (EC)</funderName>
+      <funderIdentifier funderIdentifierType="ROR">https://ror.org/00k4n6c32</funderIdentifier>
+      <awardNumber awardURI="https://cordis.europa.eu/project/rcn/210185/">730900</awardNumber>
+      <awardTitle>SERA - Seismology and Earthquake Engineering Research Infrastructure Alliance for Europe</awardTitle>
+    </fundingReference>
+  </fundingReferences>
+</resource>

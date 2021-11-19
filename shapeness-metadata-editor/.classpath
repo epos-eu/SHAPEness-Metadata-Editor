@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="lib" path="lib/jena-geosparql-4.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/antlr4-runtime-4.5.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/classmate-1.5.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/collection-0.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-cli-1.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-codec-1.15.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-collections4-4.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-compress-1.20.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-csv-1.8.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-io-2.8.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-lang3-3.11.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/expiring-map-1.0.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/geoapi-3.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/gson-2.8.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/hamcrest-all-1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/hibernate-validator-6.1.5.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/httpclient-4.5.13.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/httpclient-cache-4.5.13.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/httpcore-4.4.13.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jackson-annotations-2.12.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jackson-core-2.12.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jackson-databind-2.12.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jakarta.xml.bind-api-2.3.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/javassist-3.26.0-GA.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/javax.annotation-api-1.3.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/javax.el-3.0.1-b11.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/javax.el-api-3.0.1-b06.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jaxen-1.1.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jboss-logging-3.4.1.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jcl-over-slf4j-1.7.30.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jdom-2.0.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jdom-2.0.6-contrib.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jdom-2.0.6-junit.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jena-arq-4.0.0.jar" sourcepath="/home/valerio/.m2/repository/org/apache/jena/jena-arq/4.0.0/jena-arq-4.0.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jena-base-4.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jena-cmds-4.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jena-core-4.0.0.jar" sourcepath="/home/valerio/.m2/repository/org/apache/jena/jena-core/4.0.0/jena-core-4.0.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jena-dboe-base-4.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jena-dboe-index-4.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jena-dboe-storage-4.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jena-dboe-transaction-4.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jena-dboe-trans-data-4.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jena-iri-4.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jena-rdfconnection-4.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jena-shacl-4.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jena-shaded-guava-4.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jena-tdb2-4.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jena-tdb-4.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/json-20200518.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jsonld-java-0.13.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jts-core-1.16.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/junit-4.13.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/kxml2-2.3.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/kxml2-2.3.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/libthrift-0.13.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/libthrift-0.14.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/log4j-api-2.14.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/log4j-core-2.14.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/log4j-slf4j-impl-2.14.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/mapsforge-core-0.13.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/mapsforge-core-0.13.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/mapsforge-map-0.13.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/mapsforge-map-0.13.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/mapsforge-map-awt-0.13.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/mapsforge-map-awt-0.13.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/mapsforge-map-reader-0.13.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/mapsforge-map-reader-0.13.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/mapsforge-themes-0.13.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/mapsforge-themes-0.13.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.jgit-5.8.0.202006091008-r.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.mylar.zest.core.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.mylar.zest.layouts.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/serializer-2.7.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/shacl-1.3.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/sis-console-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/sis-earth-observation-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/sis-feature-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/sis-geotiff-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/sis-metadata-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/sis-netcdf-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/sis-referencing-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/sis-storage-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/sis-utility-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/sis-xmlstore-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/slf4j-api-1.7.26.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/slf4j-api-1.7.30.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/svgSalamander-v1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/unit-api-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/validation-api-2.0.1.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/xalan-2.7.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/xercesImpl.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/xml-apis.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/zest_layout.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="src" path="vocabularies"/>
+	<classpathentry kind="src" path="icons"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
